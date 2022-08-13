@@ -26,7 +26,7 @@ export default class Recorder {
       console.log('Recorded Blobs', this.recordedBlobs)
     }
 
-    this.mediaRecoder.ondataavailable = event => {
+    this.mediaRecorder.ondataavailable = event => {
       if(!event.data || !event.data.size) return;
 
       this.recordedBlobs.push(event.data);
